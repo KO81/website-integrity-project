@@ -50,16 +50,15 @@ window.getAll = function(parent, getChildrensChildren){
         var taga = 'main';  // choose whatever body tag you wat 
         var aa = 765073755420.6929; // first check, those need to be calculated against browsers look downword for (a)
         var bb = 924319814895.7274; // second check
-        var cc = 642856318068.0066; // edge or ie
-        var dd = 633111988936.4869; // chrome
-        console.log(test);
+        var cc = 642856318068.0066; // edge or ie the calculation is somewhat different from other browsers
+        var dd = 633111988936.4869; // chrome the calculation is somewhat different from other browsers
           if (aa == test || bb == test || cc == test || dd == test) {var ddd = 'true'} else {var ddd = 'false'};
           if (ddd == 'false') {
             document.getElementsByTagName(taga)[0].setAttribute('style','position:absolute;width:100%;height:100%;background-color:black;z-index:10001 !important;');
             var node = document.createElement("p");
             var textnode = document.createTextNode("siden ble ikke lastet ordenlig, eller en script ble ikke lastet ordenlig vennligst prøv på å laste siden på nytt.;");
             node.setAttribute('style','position:relative;color:white;z-index:10002;');
-            node.setAttribute('class','text-center');
+            node.setAttribute('class','text-center'); // if you using bootstrap else "node.setAttribute('stlye', node.getAttribute("style")+'text-align: center;');"
             node.appendChild(textnode);
             document.getElementsByTagName(taga)[0].innerHTML = '';
             document.getElementsByTagName(taga)[0].appendChild(node);
