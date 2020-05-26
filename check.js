@@ -36,7 +36,7 @@ window.getAll = function(parent, getChildrensChildren){
           for(var i=0; i < children; i++){
               if(parent.childNodes[i].nodeType != 3){
                   if(getChildrensChildren)
-                      relevantChildren += getCount(parent.childNodes[i],true);
+                      relevantChildren += getAll(parent.childNodes[i],true);
                   relevantChildren++;
               }
           }
