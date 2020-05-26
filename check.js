@@ -48,10 +48,11 @@ window.getAll = function(parent, getChildrensChildren){
     function checkWindow(){
         var test = getAll(document.getElementById('html'), true); // body tag element needs to an id of html (id='html')
         var taga = 'main';  // choose whatever body tag you wat 
-        var aa = 765073755420.6929; // first check, those need to be calculated against browsers look downword for (a)
+        var aa = 765073755420.6929; // first check, those need to be calculated against browsers look downwords for (a)
         var bb = 924319814895.7274; // second check
         var cc = 642856318068.0066; // edge or ie the calculation is somewhat different from other browsers
         var dd = 633111988936.4869; // chrome the calculation is somewhat different from other browsers
+             // console.log(test); (a) unmark this line to get the values.
           if (aa == test || bb == test || cc == test || dd == test) {var ddd = 'true'} else {var ddd = 'false'};
           if (ddd == 'false') {
             document.getElementsByTagName(taga)[0].setAttribute('style','position:absolute;width:100%;height:100%;background-color:black;z-index:10001 !important;');
@@ -64,5 +65,4 @@ window.getAll = function(parent, getChildrensChildren){
             document.getElementsByTagName(taga)[0].appendChild(node);
           }
     }
-    //setTimeout(function(){ console.log(test); }, 5000);setTimeout(function(){ console.log(test); }, 20000); // (a) unmark those to get the right values
     setTimeout(function(){ checkWindow(); }, 5000);setTimeout(function(){ checkWindow(); }, 20000);
